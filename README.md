@@ -5,7 +5,7 @@
 > 通过json直接在canvas上绘制图像, 基于 [cax](https://github.com/dntzhang/cax) 画图框架开发, 改进优化自 [json2canvas](https://github.com/willnewii/json2canvas.git)
 
 ## 样例
-在`docs/`目录中，`style{number}.md`的文件
+在`docs/`目录中，`style{number}.md`的文件， **后期将持续更新新画图特性的样例**
 
 ## 🦖 小程序组件
 
