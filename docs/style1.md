@@ -2,7 +2,7 @@
 商品详情 - 商品主图生成
 
 ## 效果
-![image.png](https://www.tapd.cn/tfl/pictures/202401/tapd_50372234_1705737821_793.png)
+![image.png](/docs/image/image1.png)
 
 ## 模板
 
