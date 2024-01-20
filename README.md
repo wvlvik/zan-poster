@@ -7,6 +7,9 @@
 ## 样例
 在`docs/`目录中，`style{number}.md`的文件， **后期将持续更新新画图特性的样例**
 
+
+![image.png](/docs/image/image2.png)
+
 ## 🦖 小程序组件
 
 > 小程序使用npm安装第三方包，详见 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html?search-key=npm)
