@@ -5,17 +5,16 @@
 > 通过json直接在canvas上绘制图像, 基于 [cax](https://github.com/dntzhang/cax) 画图框架开发, 改进优化自 [json2canvas](https://github.com/willnewii/json2canvas.git)
 
 ## 样例
-在`docs/`目录中
+在`docs/`目录中，`style{number}.md`的文件
 
 ## 🦖 小程序组件
 
 > 小程序使用npm安装第三方包，详见 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html?search-key=npm)
-> 安装后大小为 48kb
 
 
 ### 项目配置
 
-> 小程序主包超出2M，可采用[分包异步化](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html)方案
+> 安装后大小为 48kb， 小程序主包超出2M，可采用[分包异步化](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html)方案
 
 1. npm i zan-poster
 2. 微信开发者工具 -> 工具 -> 构建npm
