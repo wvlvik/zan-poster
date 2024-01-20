@@ -4,47 +4,10 @@
 
 
 
-## 🐠 准备
-
-项目由lerna管理，包管理工具采用pnpm，需全局安装pnpm
-
-**全局安装pnpm**
-
-```shell
-npm i -g pnpm
-```
-
-**安装项目依赖**
-
-```shell
-# lerna内置CLI
-lerna bootstrap
-```
-
-
-
-## 🐘 模板开发
-
-> 配置文件: packages/poster-lib/src/option.js
-
-```shell
-# 开发
-pnpm dev:poster
-```
-
-
-## 🐬 打包、发布
-
-```shell
-# 打包并发布至npm
-pnpm release
-```
-
-
-
 ## 🦖 小程序组件
 
 > 小程序使用npm安装第三方包，详见 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html?search-key=npm)
+> 安装后大小为 48kb
 
 
 ### 项目配置
