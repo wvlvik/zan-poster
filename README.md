@@ -16,7 +16,7 @@
 
 ### 项目配置
 
-> 小程序主包超出2M，可采用[分包异步化](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html)方案
+> zan-poster安装后大小41kb, 如果小程序主包超出2M，可采用[分包异步化](https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/async.html)方案
 
 1. npm i zan-poster
 2. 微信开发者工具 -> 工具 -> 构建npm
@@ -252,10 +252,11 @@ createPoster()
 | colors         | Array   | [[0,'#CCC'],[0.2,'#AAA'],[1,'#AAA']] | 否   | 填充颜色，同canvas addColorStop                                                            |
 | pin            | Boolean |                                      | 否   | 固定位置(如果你有元素放在了动态文本的下方,又不希望这个元素位置被更新,可以设置该属性为true) |
 | filter         | String  |                                      | 否   | [css滤镜](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)                         |
-| lineDecoration | String  |                                      | 否   | 'top', 'middle', 'bottom'; 划线显示位置，为空则不显示                                      |
+| lineDecoration | String  |                                      | 否   | 'top', 'middle', 'bottom'; 划线显示位置，为空则不显示 (支持多行)                           |
 | lineColor      | String  | 跟随字体颜色                         | 否   | 颜色                                                                                       |
-| lineSize      | Number  | 2                                    | 否   | 线条粗细                                                                                   |
-| lineOffset     | Number  | 0                                    | 否   | 线条偏移量(正往下，负往上)                                                                 |
+| lineSize       | Number  | 2                                    | 否   | 线条粗细                                                                                   |
+| lineOffsetTop  | Number  | 0                                    | 否   | 线条上下偏移量(正往下，负往上)                                                             |
+| lineOffsetLeft | Number  | 0                                    | 否   | 线条左右偏移量(正往右，负往左)                                                             |
 | lineLevel      | String  | 'top'                                | 否   | 'top', 'bottom' 线条置于文字顶部或底部                                                     |
 
 ### Image（图片）
@@ -368,5 +369,5 @@ createPoster()
 - 容器内单列、多列排版
 - 修复了图片容器若干问题
 - 集成阿里和七牛裁图能力
-- 文字划线
+- 文字划线(支持多行)
 - 容器垂直排版
