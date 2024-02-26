@@ -52,6 +52,7 @@ Page({
   methods: {
     onChange(array) {
       // 接收画图数据
+      console.log(array)
       // [{ tempFilePath: 'xxx', errMsg: 'drawer:ok' }]
     }
   }
@@ -97,17 +98,34 @@ Page({
       painting: this.data.painting,
       success(array) {
         // 接收画图数据
+        console.log(array)
         // [{ tempFilePath: 'xxx', errMsg: 'drawer:ok' }]
       },
       fail() {}
     })
 
-    // 2: promise
+    // 2: 回调 (异步画图)
+    poster.draw({
+      // 设置画图数据
+      painting: this.data.painting,
+      // 异步画图设置
+      sync: false,
+      success(array) {
+        // 接收单次绘制完成全量数据 (未绘制的图像值为空白base64格式图)
+        // 如果是多图绘制，则回调函数会被执行多次，将每一次最新数据返回
+        console.log(array)
+        // [{ tempFilePath: 'xxx', errMsg: 'drawer:ok' }]
+      },
+      fail() {}
+    })
+
+    // 3: promise
     poster.draw({
       // 设置画图数据
       painting: this.data.painting
     }).then((array) => {
       // 接收画图数据
+      console.log(array)
       // [{ tempFilePath: 'xxx', errMsg: 'drawer:ok' }]
     }).catch(console.log)
   }
@@ -185,6 +203,7 @@ async function createPoster() {
     painting
   }).then((array) => {
     // 接收画图数据
+    console.log(array)
     // [{ tempFilePath: 'xxx', errMsg: 'drawer:ok' }]
   })
 }
