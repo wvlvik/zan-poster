@@ -60,12 +60,13 @@ Page({
 
 **属性**
 
-| 名称        | 类型          | 默认值 | 必填 | 说明                                                                                |
-| ----------- | ------------- | ------ | ---- | ----------------------------------------------------------------------------------- |
-| painting    | Object、Array | {}     | 是   | 画图数据, 以数组的形式传入多组画图数据实现多张海报绘制 (回调方式绘制与此一致)       |
-| showCanvas  | Boolean       | false  | 否   | 是否显示画板                                                                        |
-| preload     | Boolean       | false  | 否   | 图片、字体预加载(注意：预加载完成后，开始启动画图需设置为false，否则画图将不会启动) |
-| showLoading | Boolean       | true   | 否   | 是否显示画图loading进度状态，且无法穿透(H5不支持)                                   |
+| 名称        | 类型          | 默认值 | 必填 | 说明                                                                                                                                                         |
+| ----------- | ------------- | ------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| painting    | Object、Array | {}     | 是   | 画图数据, 以数组的形式传入多组画图数据实现多张海报绘制 (回调方式绘制与此一致)                                                                                |
+| showCanvas  | Boolean       | false  | 否   | 是否显示画板                                                                                                                                                 |
+| preload     | Boolean       | false  | 否   | 图片、字体预加载(注意：预加载完成后，开始启动画图需设置为false，否则画图将不会启动)                                                                          |
+| showLoading | Boolean       | true   | 否   | 是否显示画图loading进度状态，且无法穿透(H5不支持)                                                                                                            |
+| sync        | Boolean       | true   | 否   | 是否同步画图; false时为异步, 支持success回调函数和change事件接收单次绘制完成全量数据 (未绘制的图像值为空白base64格式图, promise风格只能接收全部绘制完成数据) |
 
 **事件**
 
@@ -156,8 +157,12 @@ app.config.isCustomElement = tag => tag.startsWith('zan-')
 ```
 
 **web**
+
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/zan-poster/dist/zan-component/zan-component.esm.js"></script>
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/zan-poster/dist/zan-component/zan-component.esm.js"
+></script>
 ```
 
 **页面或模板中使用**
@@ -257,7 +262,7 @@ createPoster()
 | lineSize       | Number  | 2                                    | 否   | 线条粗细                                                                                   |
 | lineOffsetTop  | Number  | 0                                    | 否   | 线条上下偏移量(正往下，负往上)                                                             |
 | lineOffsetLeft | Number  | 0                                    | 否   | 线条左右偏移量(正往右，负往左)                                                             |
-| lineLevel      | String  | 'top'                                | 否   | 'top', 'bottom' 线条置于文字顶部或底部                                                     |
+| lineLevel      | String  | 'top'                                | 否   | 'top', 'bottom' 线条置于文字顶或底层                                                       |
 
 ### Image（图片）
 
@@ -269,7 +274,7 @@ createPoster()
 | x          | Number         | 0             | 否   | 相对于父元素左侧的距离                                                      |
 | y          | Number         | 0             | 否   | 相对于父元素顶部的距离                                                      |
 | isCircular | Boolean        | false         | 否   | 圆，以短边为直径                                                            |
-| maxHeight  | Number         | 实际最大高度  | 否   | 实际可接受图片的最大高度(注意: IOS下最大高度4096/2px，设置完一定得真机测试) |
+| maxHeight  | Number         | 实际最大高度  | 否   | 实际可接受图片的最大高度(注意: IOS下最大高度4096/2px)                       |
 | isCenter   | Boolean        | false         | 否   | 以短边为准，居中                                                            |
 | filter     | String         |               | 否   | [css滤镜](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)          |
 
