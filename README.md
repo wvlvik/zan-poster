@@ -4,6 +4,18 @@
 
 > 通过json直接在canvas上绘制图像, 基于 [cax](https://github.com/dntzhang/cax) 画图框架开发, 改进优化自 [json2canvas](https://github.com/willnewii/json2canvas.git)
 
+## 海报模板开发
+
+> 设计器可自行根据设计稿进行模板开发，请查阅下方文档 `画图数据类型及属性参照表` 
+
+```shell
+# 安装依赖
+pnpm i
+
+# playground
+pnpm dev
+```
+
 ## 样例
 在`docs/`目录中，`style{number}.md`的文件， **后期将持续更新新画图特性的样例**
 
@@ -395,3 +407,4 @@ createPoster()
 - 集成阿里和七牛裁图能力
 - 文字划线(支持多行)
 - 容器垂直排版
+- 图片默认webp格式

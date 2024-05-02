@@ -1,0 +1,37 @@
+{
+  "name": "zan-poster",
+  "type": "module",
+  "version": "1.0.10",
+  "private": true,
+  "description": "通过json在canvas上绘制图像, 基于cax画图框架开发, 本画图组件是json2canvas库的改造、优化版本 (详情查看README.md文档末说明)。",
+  "author": {
+    "name": "salex",
+    "email": "wvlviker@qq.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=7"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:lib": "vite build --config vite.lib.config.js"
+  },
+  "dependencies": {
+    "jsoneditor": "^10.0.3",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5",
+    "zan-poster": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "babel-preset-latest": "^6.24.1",
+    "sass": "^1.69.6",
+    "ts-node": "^10.9.2",
+    "vite": "^5.0.8",
+    "vite-plugins": "^0.0.2"
+  }
+}
